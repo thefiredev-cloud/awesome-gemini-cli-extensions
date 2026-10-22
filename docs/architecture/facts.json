@@ -1,0 +1,31 @@
+{
+ "repo": "awesome-gemini-cli-extensions",
+ "files_tracked": 3,
+ "head": "61c94566c5d7efb0f13f4d171d08d34dde2c5485",
+ "origin": "https://github.com/thefiredev-cloud/awesome-gemini-cli-extensions.git",
+ "default_branch": "main",
+ "languages": [
+  [
+   ".md",
+   2
+  ]
+ ],
+ "readme": "README.md",
+ "readme_first_paragraph": "**\ud83d\udc49 See also: [Awesome Gemini CLI](https://github.com/Piebald-AI/awesome-gemini-cli)**",
+ "top_dirs": [],
+ "manifests": [],
+ "libs": [],
+ "entry_points": [],
+ "services": [],
+ "deploy_targets": [],
+ "ci_workflows": [],
+ "cron_and_timers": [],
+ "files_scanned": 0,
+ "external_hosts": [],
+ "env_var_names": [],
+ "ci_secret_names": [],
+ "data_store_signals": {},
+ "auth_signals": {},
+ "tests": [],
+ "docs_files": []
+}

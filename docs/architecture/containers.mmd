@@ -1,0 +1,19 @@
+flowchart LR
+  contrib(["Extension author / contributor"]):::actor
+  reader(["Gemini CLI user"]):::actor
+  maint(["Maintainer"]):::actor
+  ext{{"Listed extension repos"}}:::ext
+  subgraph SYSTEM["awesome-gemini-cli-extensions"]
+    list[("README.md<br/>Markdown, grouped by category")]:::store
+    badge["Mentioned-in badge<br/>awesome.re badge"]:::doc
+  end
+  contrib -->|"PR adds entry"| list
+  maint -->|"merges"| list
+  reader -->|"browses"| list
+  list -.->|"links"| ext
+  reader -.->|"gemini extension install ‹url›"| ext
+  contrib -.->|"may add to own README"| badge
+  classDef actor fill:#fde68a,stroke:#b45309,color:#111827
+  classDef doc fill:#fed7aa,stroke:#c2410c,color:#0b1220
+  classDef ext fill:#e5e7eb,stroke:#4b5563,color:#0b1220,stroke-dasharray:4 3
+  classDef store fill:#bbf7d0,stroke:#15803d,color:#0b1220

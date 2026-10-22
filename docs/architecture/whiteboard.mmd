@@ -1,0 +1,13 @@
+flowchart LR
+  contrib(["Contributor"]):::actor
+  list[("README.md<br/>grouped by category")]:::store
+  maint(["Maintainer"]):::actor
+  reader(["Gemini CLI user"]):::actor
+  ext{{"Extension repos<br/>installed by URL"}}:::ext
+  contrib -->|"pull request"| list
+  maint -->|"merges"| list
+  reader -->|"browses"| list
+  reader -.->|"installs"| ext
+  classDef actor fill:#fde68a,stroke:#b45309,color:#111827
+  classDef ext fill:#e5e7eb,stroke:#4b5563,color:#0b1220,stroke-dasharray:4 3
+  classDef store fill:#bbf7d0,stroke:#15803d,color:#0b1220

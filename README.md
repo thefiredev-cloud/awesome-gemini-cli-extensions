@@ -153,3 +153,27 @@
 - [Looker](https://github.com/gemini-cli-extensions/looker) - Provides a set of tools to interact with Looker instances. It allows you to manage your Looks, dashboards, and explores directly from the Gemini CLI, using natural language prompts.
 - [Minds](https://github.com/minds-ai-co/minds-mcp) - Run synthetic market research from the CLI: create AI audiences, interview them, and run studies such as MaxDiff, conjoint and NPS.
 - [Equibles](https://github.com/daniel3303/stock-market-mcp-server) - US company financial data from the hosted Equibles MCP server: SEC filings, as-reported fundamentals, earnings-call transcripts, 13F holdings, and insider and congressional trades, with OAuth sign-in.
+
+<!-- arch:begin -->
+## Architecture
+
+A curated Markdown list of Gemini CLI extensions, maintained by pull request.
+
+```mermaid
+flowchart LR
+  contrib(["Contributor"]):::actor
+  list[("README.md<br/>grouped by category")]:::store
+  maint(["Maintainer"]):::actor
+  reader(["Gemini CLI user"]):::actor
+  ext{{"Extension repos<br/>installed by URL"}}:::ext
+  contrib -->|"pull request"| list
+  maint -->|"merges"| list
+  reader -->|"browses"| list
+  reader -.->|"installs"| ext
+  classDef actor fill:#fde68a,stroke:#b45309,color:#111827
+  classDef ext fill:#e5e7eb,stroke:#4b5563,color:#0b1220,stroke-dasharray:4 3
+  classDef store fill:#bbf7d0,stroke:#15803d,color:#0b1220
+```
+
+[Full architecture](docs/ARCHITECTURE.md) · Hi-res: [SVG](docs/architecture/whiteboard.svg) · [PNG 3x](docs/architecture/whiteboard@3x.png) · [dark PNG](docs/architecture/whiteboard.dark@3x.png) · [Explorable (Archify)](docs/architecture/awesome-gemini-cli-extensions.archify.html) · [Graphify report](docs/architecture/graphify/GRAPH_REPORT.md)
+<!-- arch:end -->
