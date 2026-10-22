@@ -1,0 +1,10 @@
+sequenceDiagram
+  autonumber
+  actor c as Contributor
+  participant repo as This repo
+  actor m as Maintainer
+  c->>repo: fork, edit README.md, entry at bottom of the section
+  c->>repo: open pull request
+  m->>repo: check it is a Gemini CLI extension and the format matches
+  m->>repo: merge
+  Note over c: Optional: author adds the Mentioned-in badge to their own README
